@@ -2,9 +2,85 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
 
+body {
+    max-width: 1280px;
+    font-family: 'Manrope', sans-serif;
+    background-color: hsl(218, 23%, 16%);
+    display: grid;
+    place-content: center;
+    text-align: center;
 
+}
 
+.card {
+    background-color: hsl(217, 19%, 24%);
+    border-radius: 10px;
+    max-width: 350px;
+    padding: 30px;
+    margin-bottom: 70px;
+    position: relative;
+
+}
+
+.card-title {
+    color: hsl(150, 100%, 66%);
+    font-weight: 300;
+    font-size: .8rem;
+    margin: 0;
+    text-transform: uppercase;
+
+}
+
+.card-body {
+    font-size: 28px;
+    color: hsl(193, 38%, 86%);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.pattern-divider {
+    width: 100%;
+    max-width: 340px;
+    background-size: cover;
+    margin-bottom: 2em;
+}
+
+.circleBase {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+
+}
+
+.btn-circle {
+    width: 50px;
+    height: 50px;
+    background: #4bc475;
+    cursor: pointer;
+    will-change: filter;
+}
+
+.btn-circle:hover {
+    filter: drop-shadow(0 0 2em hsl(150, 100%, 66%));
+}
+
+.dice-img {
+    width: 20px;
+    height: 20px;
+}
 
 .attribution {
     font-size: 11px;
@@ -12,5 +88,17 @@
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: hsl(193, 38%, 86%);
+    text-decoration: none;
+}
+
+@media (min-width: 600px) {
+    .card {
+        max-width: 600px;
+    }
+
+    .pattern-divider {
+        max-width: 400px;
+    }
+
 }
